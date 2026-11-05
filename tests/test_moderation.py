@@ -1,7 +1,6 @@
 from unittest.mock import patch
 
 import pytest
-
 from blog.forms import MODERATION_ERROR, CommentForm
 from blog.models import Comment
 from blog.moderation import is_toxic
