@@ -97,7 +97,6 @@ class Post(PublishedModel):
 
 class Category(PublishedModel):
     objects = models.Manager()
-    published = PublishedManager()
     title = models.CharField('Заголовок', max_length=256)
     description = models.TextField('Описание')
     slug = models.SlugField(
@@ -119,7 +118,6 @@ class Category(PublishedModel):
 
 class Location(PublishedModel):
     objects = models.Manager()
-    published = PublishedManager()
     name = models.CharField('Название места', max_length=256)
 
     class Meta:
