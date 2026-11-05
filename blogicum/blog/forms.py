@@ -1,7 +1,8 @@
-from blog.models import Comment, Post
-from blog.moderation import is_toxic
 from django import forms
 from django.core.exceptions import ValidationError
+
+from blog.models import Comment, Post
+from blog.moderation import is_toxic
 
 MODERATION_ERROR = (
     'Комментарий не проходит модерацию. '

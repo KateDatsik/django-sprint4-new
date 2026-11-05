@@ -1,8 +1,9 @@
 import functools
 
 import torch
-from core.constants import TOXICITY_THRESHOLD
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+from core.constants import TOXICITY_THRESHOLD
 
 MODEL_NAME = 'cointegrated/rubert-tiny-toxicity'
 

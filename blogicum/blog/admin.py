@@ -1,4 +1,3 @@
-# blog/admin.py
 from django.contrib import admin
 
 from .models import Category, Location, Post
@@ -11,6 +10,7 @@ class PostInline(admin.TabularInline):
     extra = 0
 
 
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     inlines = (
         PostInline,
@@ -23,6 +23,7 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = (
         'title',
@@ -41,6 +42,6 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
 
-admin.site.register(Post, PostAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Location)
+@admin.register(Location)
+class LocationAdmin(admin.ModelAdmin):
+    pass
