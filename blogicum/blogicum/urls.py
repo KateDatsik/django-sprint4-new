@@ -28,5 +28,5 @@ if settings.DEBUG:
     )
 
 handler404 = 'pages.views.page_not_found'
-handler403 = 'pages.views.permission_denied'
+handler403 = 'pages.views.csrf_failure'
 handler500 = 'pages.views.server_error'
